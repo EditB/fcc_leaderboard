@@ -4,12 +4,12 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 20px;
 }
 
 .App-header {
   background-color: green;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }
@@ -25,4 +25,22 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.col {
+  float: left;
+  width: 25%;
+}
+
+.camperName {
+  text-align: left;
+}
+
+.row{
+  padding-top: 0.5%;
+}
+
+.headerRow {
+  background-color: #e3eae4;
+  color: green;
 }
