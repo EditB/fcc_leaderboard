@@ -8,7 +8,7 @@ export const LeaderItem = (props) => {
         {props.index}
       </div>
       <div className="col camperName">
-        <img src='https://avatars3.githubusercontent.com/u/6472304?v=4"' height="10%"  width="10%" alt={props.username} /> {props.username}
+        <img src={props.img} height="10%"  width="10%" alt={props.username} /> {props.username}
       </div>
       <div className="col">
         {props.recent}
