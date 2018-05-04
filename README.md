@@ -1,4 +1,4 @@
-Free Code Camp Leaderboard project (with React)
+## Free Code Camp Leaderboard project (with React)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
