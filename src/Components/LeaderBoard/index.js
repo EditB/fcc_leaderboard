@@ -9,14 +9,23 @@ export class Leaderboard extends Component {
     super(props);
 
     this.fetchResults = this.fetchResults.bind(this);
+    this.sortBy = this.sortBy.bind(this);
 
     this.state={
-        leaders: []
+        leaders: [],
+        sortByField: "recent"
     }
+  }
+
+  sortBy(field){
+    this.setState({
+      sortByField: field
+    });
   }
 
   fetchResults(){
 
+    //Note: need to implement a case when there's no response and give a msg to the users
     fetch('https://fcctop100.herokuapp.com/api/fccusers/top/recent')
       .then(resp => resp.json())
       .then(resp => {
@@ -31,10 +40,12 @@ export class Leaderboard extends Component {
   render() {
     const {leaders} = this.state;
 
+    //Need to figure out how to sort!!
+    //const alltime = _.sortBy({leaders}, "alltime"})
     return (
     <div className="container">
-      <LeaderHeader />
-      {leaders.map((leader, index) => (
+      <LeaderHeader sortBy={this.sortBy}/>
+      {leaders.sort((a, b) => b[this.state.sortByField] - a[this.state.sortByField]).map((leader, index) => (
          <LeaderItem
             username={leader.username}
             recent={leader.recent}
