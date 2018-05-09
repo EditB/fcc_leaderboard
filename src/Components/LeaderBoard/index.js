@@ -40,8 +40,6 @@ export class Leaderboard extends Component {
   render() {
     const {leaders} = this.state;
 
-    //Need to figure out how to sort!!
-    //const alltime = _.sortBy({leaders}, "alltime"})
     return (
     <div className="container">
       <LeaderHeader sortBy={this.sortBy}/>

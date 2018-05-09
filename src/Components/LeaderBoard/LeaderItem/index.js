@@ -2,9 +2,16 @@ import React from 'react';
 import 'whatwg-fetch';
 
 export const LeaderItem = (props) => {
+  var rowName = "row ";
+  if (props.index % 2 == 0){
+    rowName += "even";
+  }
+  else{
+    rowName += "odd";
+  }
 
   return(
-    <div className="row">
+    <div className={rowName}>
       <div className="col">
         {props.index + 1}
       </div>

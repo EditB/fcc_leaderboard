@@ -40,6 +40,14 @@
   padding-top: 0.5%;
 }
 
+.odd {
+  background-color: #ffffea;
+}
+
+.even{
+  background-color: #eaf7d2;
+}
+
 .headerRow {
   background-color: #e3eae4;
   color: green;

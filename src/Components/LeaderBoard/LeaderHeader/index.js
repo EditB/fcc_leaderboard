@@ -10,8 +10,8 @@ export class LeaderHeader extends React.Component {
       <div className="row headerRow">
         <div className="col">#</div>
         <div className="col camperName">Camper Name</div>
-        <div onClick={this.sort.bind(this, 'recent')} id="recent" className="col">Points in Past 30 Days</div>
-        <div id="alltime" onClick={this.sort.bind(this, 'alltime')} className="col">All time points</div>
+        <div onClick={this.sort.bind(this, 'recent')} id="recent" className="col" title="Click here to sort by Recent Points!">Points in Past 30 Days</div>
+        <div id="alltime" onClick={this.sort.bind(this, 'alltime')} className="col" title="Click here to sort by All time Points!">All time points</div>
       </div>
     );
  }
